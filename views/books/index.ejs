@@ -1,0 +1,47 @@
+<% include  ../partials/header %>
+
+
+<div class="container">
+<header class = "jumbotron" >                               <!-- WE CAN ALSO  USE DIV TAG IN PLACE OF HEADER TAG -->
+
+   <div class="jumbotron">
+      <div class="container">
+        <h1> <strong> yehBOok </strong>  </h1>
+        <p>you can add any book which you want!!!!!</p>
+        <p>
+        <a href="/books/new" class="btn btn-default btn-lg showcase-btn">Add new book</a>
+        </p>
+      </div>
+   </div>
+</header>
+
+
+        <div class="row" style="display:flex; flex-wrap: wrap;">
+                
+                <% booksNAME.forEach(function(x){ %>
+   
+                     <div class="col-md-3 col-sm-6">                                
+                       <div class="thumbnail">
+                         <img src="<%= x.image %>" >
+                            
+
+                            <div class="caption">
+                                    
+                                     <%=   x.name   %>
+                                     <p> by  <strong> <%=  x.writer  %> </strong> </p>
+
+                            </div>
+                            <p>
+                                 <a href="/books/<%= x._id %>" id="moreInfo" class="btn btn-primary">More Info</a>
+                            </p>
+                        
+                       </div>
+                    </div>
+                         <% }); %>
+
+        </div>
+
+
+ </div>
+
+ <% include  ../partials/footer %>
