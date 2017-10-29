@@ -19,7 +19,6 @@ var configAuth          = require("./config/auth");
 
 
 
-
 //--------------------------------------------------------------------------------------------------------------------------
 
 mongoose.connect("mongodb://localhost/bitbuket");  // connecting with DB and creatind a DB(yeh_BOok) in mongodb
